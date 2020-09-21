@@ -1,5 +1,5 @@
 # personal test files
-./ignore
+ignore/*
 
 # quick access files
 *.lnk

@@ -1,0 +1,40 @@
+PropBlueprint {
+    Categories = {
+        'RECLAIMABLE',
+    },
+    Defense = {
+        Health = 50,
+        MaxHealth = 50,
+    },
+    Display = {
+        Mesh = {
+            IconFadeInZoom = 4,
+            LODs = {
+                {
+                    LODCutoff = 1000,
+                    ShaderName = 'NormalMappedTerrain',
+                },
+            },
+        },
+        UniformScale = 0.25,
+    },
+    Economy = {
+        ReclaimEnergyMax = '',
+        ReclaimMassMax = 75,
+        ReclaimTime = 5,
+    },
+    Footprint = {
+        OccupancyCaps = 16,
+        SizeX = 12,
+        SizeY = 12,
+    },
+    Interface = {
+        HelpText = 'Ice Berg',
+    },
+    Physics = {
+        BlockPath = true,
+    },
+    SizeX = 5,
+    SizeY = 1.5,
+    SizeZ = 6,
+}

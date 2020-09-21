@@ -1,18 +1,9 @@
-#****************************************************************************
-#**
-#**  File     : /lua/proptree.lua
-#**
-#**  Summary  : Class for tree props that can burn and fall down and such
-#**
-#**  Copyright 2006 Gas Powered Games, Inc.  All rights reserved.
-#****************************************************************************
-local Prop = import('/lua/sim/Prop.lua').Prop
-local FireEffects = import('/lua/EffectTemplates.lua').TreeBurning01
-local DefaultExplosions = import('/lua/defaultexplosions.lua')
-local GetRandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
+-- the core class for any prop
+local Prop = import('/lua/sim/Prop.lua').Prop
+
+-- used to add in collision detection
 local Entity = import('/lua/sim/Entity.lua').Entity
-local Unit = import('/lua/sim/Unit.lua').Unit
 
 Collidable = Class(Prop) {
 
@@ -95,4 +86,29 @@ Collidable = Class(Prop) {
     end,
     
 
+}
+
+-- used 
+Submarinable = Class(Prop) {
+    OnCreate = function(self)
+
+    end,
+
+    OnCollisionCheck = function(self, other)
+        LOG("Check!")
+        return true
+    end,
+
+    OnCollision = function(self, other, nx, ny, nz, depth)
+        LOG("Boom!")
+    end,
+
+    OnDamage = function(self, instigator, armormod, direction, type)
+    end,
+
+    OnKilled = function(self)
+    end,
+
+    OnDestroy = function(self)
+    end,
 }
