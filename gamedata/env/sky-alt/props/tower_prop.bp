@@ -25,16 +25,14 @@ PropBlueprint {
     },
     Footprint = {
         OccupancyCaps = 16,
-        SizeX = 12,
-        SizeY = 12,
     },
     Interface = {
-        HelpText = 'Ice Berg',
+        HelpText = 'Tower',
     },
     Physics = {
         BlockPath = true,
     },
-    SizeX = 5,
-    SizeY = 1.5,
-    SizeZ = 6,
+    SizeX = 16,
+    SizeY = 250,
+    SizeZ = 16,
 }
